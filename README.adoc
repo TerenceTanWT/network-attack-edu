@@ -15,6 +15,20 @@ This is a group project for NUS CS3235 - Computer Security module.
 
 As the world is becoming more interconnected through the Internet, there have been an increase in various network-based attacks. Therefore, we created a web-based educational tool that will allow users to learn the various network-based attacks through a series of hands-on technical demonstration through our intuitive website, without the need of complex tools. As the solution to most network based attacks demonstrated in our educational website can be prevented with SSL, we developed a web extension to help detect SSL hijacking as SSL is also prone to attack. We believe that our web based hands-on demonstration will keep users engaged and allow them to learn better than any traditional books or lectures.
 
+=== Sample Screenshots
+
+.DNS Spoofing Demo
+image::./images/Demo_DNS_Spoofing.png[Caption="Figure : "]
+
+.Password Sniffing Demo
+image::./images/Demo_Password_Sniffing.png[Caption="Figure : "]
+
+.Session Hijacking Demo
+image::./images/Demo_Session_Hijacking.png[Caption="Figure : "]
+
+.Firefox Extension to Detect SSL Hijacking
+image::./images/Demo_SSL_Hijacking_Detection.png[Caption="Figure : "]
+
 === Setting Up of Educational Web Tool
 
 image::./images/Network_Diagram.png[Network Diagram]
