@@ -42,6 +42,8 @@ image::./images/Demo_SSL_Hijacking_Detection.png[Caption="Figure : "]
 .Network Diagram
 image::./images/Network_Diagram.png[Caption="Figure : "]
 
+{nbsp} +
+
 . Setup a wireless access point (AP) with Internet access, DHCP range of 192.168.1.4 to 192.168.1.254, and DNS server 192.168.1.2. Connect your computer to the Wi-Fi.
 
 . Download VM #1 and #2 https://drive.google.com/drive/folders/1MsDX6YMXppoOnNtAmv1S6OdW-XFF_Y6h?usp=sharing[here].
