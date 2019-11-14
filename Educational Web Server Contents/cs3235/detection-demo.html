@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Educational Tool</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">Educational Tool: Insecure Networks</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="spoofing.html">
+          <i class="fas fa-fw fa-user-secret"></i>
+            <span>DNS Spoofing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="sniffing.html">
+          <i class="fas fa-fw fa-rss"></i>
+            <span>Password Sniffing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="cookie.html">
+          <i class="fas fa-fw fa fa-edit"></i>
+            <span>Session Stealing</span></a></li>
+      <li class="nav-item active">
+        <a class="nav-link" href="detection.html">
+          <i class="fas fa-fw fa fa-certificate"></i>
+            <span>Certificate Detection</span></a></li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="detection.html">Certificate Detection (Firefox Extension)</a>
+          </li>
+          <li class="breadcrumb-item active">Demonstration</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>Detection (Demonstration)</h1>
+        <hr>
+          <p>In the digital age, internet users are trained to recognize and trust the green padlock symbol next the browser’s URL bar, indicating an HTTPS connection and thus the use of SSL/TLS. However, this is not necessarily the be-all-end-all when it comes to determining network security. <br><br>
+              
+          While the presence of SSL certificates is supposed to indicate trust, our computers can be tricked to trust certificates signed by unreputable certificate authorities. This can either happen due to our own carelessness, or, malware can do this itself. Malicious actors scan exploit this trust to instigate man-in-the-middle attacks against HTTPS without the user being any the wiser. Therefore, we should take the green padlock symbol with a grain of salt. <br><br>
+              
+          In order to add an extra layer of safety with regards to SSL certificates, we have created a Firefox extension that will automatically double-check the certificates of websites that you travel to. It does so by retrieving the certificate received on the browser and double-checking this against the certificate for the same website retrieved from a server hosted in the cloud. This ensures that you are correctly receiving the expected certificate for a given website. <br><br>
+              
+          As previously mentioned, this extension can help with discovering man-in-the-middle attacks against the HTTPS protocol. In particular, this helps detect SSL Hijacking. Imagine that Alice is trying to communicate to Bob via HTTPs. However, Alice’s communications are going through attacker Harry (e.g. via ARP poisoning). Then, Harry can pretend to be Bob when communicating with Alice by using his own SSL certificate. Meanwhile, Harry communicates with Bob normally. If Alice’s computer is not set up to challenge certificates correctly, or if Alice has trusted unsafe certificate authorities, she may overlook the fact that Harry’’s certificate is not actually correct. Note that if Harry actually has access to Bob’s private key, then there is nothing that can be done since he can then perfectly use Bob’s SSL certificate. <br><br>
+              
+          One real world example of this attack is the Avast Antivirus software. Avast gets the computer to trust its own certificate authority, then strips TLS/SSL traffic, performs analysis, and signs it with its own certificates. If this was an attacker, it’s clear to see why this might be troublesome - the attacker can access all communications. The browser still sees everything as HTTPS, since there is a valid, trusted SSL certificate. This would be detected by our Firefox extension. Another real world example of SSL Hijacking that was in the news recently is the Superfish software, which introduced vulnerabilities to Lenovo laptops that had this installed by default.</p>
+          
+          <center><img style="width:60%;" src="/detection-demo.png"> </img> <br></center>
+          
+          <br>
+          <center><a href="SSL_Hijack_Detector.zip" target="_blank"><button>Download Firefox Extension</button></a></center><br>
+          <br>
+          <center><a href="https://github.com/kzzhang/firefox_certificate_checker" target="_blank"><button>Proceed to Github Repository</button></a></center><br>
+          
+          <h2> Installation Instructions </h2>
+          1. Download <a href="https://www.mozilla.org/en-US/firefox/nightly/all/">Firefox Nightly</a> (only Nightly, Dev Edition, or ESR allows installation of unsigned extensions).
+          <br>
+          2. Go to <i>about:config</i> and set <i>xpinstall.signatures.required</i> to <b>false</b>, in order to allow installation of unsigned extensions.
+          <br>
+          3. Go to <i>about:addons</i>, click on the setting icon (top right), select <i>Install Add-on From File...</i>, and select the <b>SSL_Hijack_Detector.zip</b> file.
+      
+      
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+</body>
+
+</html>

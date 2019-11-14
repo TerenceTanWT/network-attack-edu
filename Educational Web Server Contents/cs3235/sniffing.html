@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Educational Tool</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">Educational Tool: Insecure Networks</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="spoofing.html">
+          <i class="fas fa-fw fa-user-secret"></i>
+            <span>DNS Spoofing</span></a></li>
+      <li class="nav-item active">
+        <a class="nav-link" href="sniffing.html">
+          <i class="fas fa-fw fa-rss"></i>
+            <span>Password Sniffing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="cookie.html">
+          <i class="fas fa-fw fa fa-edit"></i>
+            <span>Session Stealing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="detection.html">
+          <i class="fas fa-fw fa fa-certificate"></i>
+            <span>Certificate Detection</span></a></li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Password Sniffing</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>Password Sniffing</h1>
+        <hr>
+        <p>Network sniffing is the use of a software tool, called a network sniffer, that monitors or sniffs the data flowing over computer network links in real time.</p>
+
+        <p>Sniffing attack or a sniffer attack, in context of network security, corresponds to theft or interception of data by capturing the network traffic using a sniffer (an application aimed at capturing network packets). When data is transmitted across networks, if the data packets are not encrypted, the data within the network packet can be read using a sniffer.</p>
+        
+        <p><b>How does it work?</b></p>  
+        
+        <p>Password sniffing is a technique used to gain knowledge of usernames and passwords that involves monitoring traffic on a network to pull out information.</p>
+        
+        <p>The typical implementation of a password sniffing attack involves gaining access to a computer connected to a local area network and installing a password sniffer on it. The password sniffer is a small program that listens to all traffic in the attached network(s), builds data streams out of TCP/IP packets, and extracts user names and passwords from those streams that contain protocols that send cleartext passwords.</p>
+          
+        <center><img src="sniffing.jpg" alt="Sniff"></center><br>
+          
+        <p>Using a sniffer application, an attacker can analyze the network and gain information to eventually cause the network to crash or to become corrupted, or read the communications happening across the network.</p>
+          
+        <center><a href="demo-sniffing.php"><button>Proceed to Demonstration</button></a></center><br>
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+</body>
+
+</html>

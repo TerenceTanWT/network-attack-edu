@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Educational Tool</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">Educational Tool: Insecure Networks</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="spoofing.html">
+          <i class="fas fa-fw fa-user-secret"></i>
+            <span>DNS Spoofing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="sniffing.html">
+          <i class="fas fa-fw fa-rss"></i>
+            <span>Password Sniffing</span></a></li>
+      <li class="nav-item active">
+        <a class="nav-link" href="cookie.html">
+          <i class="fas fa-fw fa fa-edit"></i>
+            <span>Session Stealing</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="detection.html">
+          <i class="fas fa-fw fa fa-certificate"></i>
+            <span>Certificate Detection</span></a></li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Session Cookie Stealing</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>Session Cookie Stealing</h1>
+        <hr>
+        <p>Session hijacking (also known as cookie hijacking) is the exploitation of a valid computer session — sometimes called a session key — to gain unauthorized access to information or services in a computer system. In particular, it is used to refer to the theft of a magic cookie used to authenticate a user to a remote server. It has particular relevance to web developers, as the HTTP cookies used to maintain a session on many web sites can be easily stolen by an attacker using an intermediary computer or with access to the saved cookies on the victim's computer.</p>
+          
+        <p><b>How does it work?</b></p>
+          
+        <p>HTTP connections make use of every user's TCP connection, and it does so using what's called a cookie. The cookie usually comprises of a string containing variables that represent the state of the user's session. If an attacker were to gain access to either manipulate the cookie's data or steal a copy of this cookie, they would be able to compromise or recreate the user's session.</p>
+        
+        <center><img src="hijacking.jpg" alt="Hijack"></center><br>
+          
+        <p> After successfully stealing appropriate session cookies an adversary might use the Pass the Cookie technique to perform session hijacking.</p>
+        
+        <p><b>What does this mean?</b></p>
+          
+        <p>Let's say you're logged on to your Facebook profile. Having selected the 'keep me logged in' checkbox when logging in, your session cookie would not be set to expire until the profile is manually logged out of. As a result, should an adversary somehow gain access to the details of the cookie, they would be able to directly access your session on a whole other device without autorisation.</p>
+        
+        <center><a href="demo-cookie.php"><button>Proceed to Demonstration</button></a></center><br>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+</body>
+
+</html>
