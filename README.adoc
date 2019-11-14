@@ -17,7 +17,7 @@ As the world is becoming more interconnected through the Internet, there have be
 
 === Setting Up of Educational Web Tool
 
-image::./images/Network_Diagram.png[Network Diagram, 600]
+image::./images/Network_Diagram.png[Network Diagram]
 
 . Setup a wireless access point (AP) with Internet access, DHCP range of 192.168.1.4 to 192.168.1.254, and DNS server 192.168.1.2. Connect your computer to the Wi-Fi.
 
