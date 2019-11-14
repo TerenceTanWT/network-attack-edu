@@ -39,7 +39,8 @@ image::./images/Demo_SSL_Hijacking_Detection.png[Caption="Figure : "]
 
 === Setting Up of Educational Web Tool
 
-image::./images/Network_Diagram.png[Network Diagram]
+.Network Diagram
+image::./images/Network_Diagram.png[Caption="Figure : "]
 
 . Setup a wireless access point (AP) with Internet access, DHCP range of 192.168.1.4 to 192.168.1.254, and DNS server 192.168.1.2. Connect your computer to the Wi-Fi.
 
